@@ -1,151 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Slither.io Clone - Green Arena</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:Inter,sans-serif;background:#050505;color:white;}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px 50px;background:#010101;}
-header .logo{font-weight:900;font-size:28px;color:#00FF66;}
-header nav a{margin-left:20px;color:#bbb;font-weight:600;text-decoration:none;}
-header nav a:hover{color:#00FF66;}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DAMNBRUH — UI Clone</title>
 
-/* HERO */
-.hero{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:80px 60px;}
-.hero-text{max-width:600px;}
-.hero h1{font-size:3.6rem;font-weight:900;}
-.hero h1 span{background:linear-gradient(90deg,#00FF66,#00CC33);-webkit-background-clip:text;color:transparent;}
-.hero p{color:#aaa;margin:20px 0;font-size:1.15rem;}
-.hero-buttons a{display:inline-block;margin-right:15px;padding:14px 26px;border-radius:999px;font-weight:800;text-decoration:none;transition:0.2s;}
-.btn-primary{background:linear-gradient(90deg,#00FF66,#00CC33);color:black;}
-.btn-secondary{border:2px solid #00FF66;color:#00FF66;}
-.btn-primary:hover{transform:scale(1.05);}
-.btn-secondary:hover{background:#00FF66;color:black;}
+  <!-- Fonts (free) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
 
-/* HERO RIGHT */
-.hero-graphic{width:280px;height:280px;border-radius:50%;background:#111;display:flex;align-items:center;justify-content:center;box-shadow:0 0 50px rgba(0,255,102,0.4);margin-top:30px;}
-.hero-graphic img{width:140px;animation:spin 6s linear infinite;}
-@keyframes spin{from{transform:rotateY(0deg);}to{transform:rotateY(360deg);}}
-
-/* LIVE GAMES */
-.section{padding:70px 60px;}
-.section-title{font-size:2.4rem;font-weight:900;margin-bottom:25px;}
-.games-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
-.game-card{background:#111;padding:24px;border-radius:18px;box-shadow:0 0 18px rgba(0,255,102,0.12);transition:0.2s;border-top:4px solid transparent;}
-.game-card:hover{transform:translateY(-6px);border-top-color:#00FF66;box-shadow:0 0 40px rgba(0,255,102,0.5);}
-.game-title{font-weight:900;font-size:1.3rem;margin-bottom:6px;}
-.badge{display:inline-block;background:#00FF9930;color:#00FF66;padding:4px 10px;border-radius:999px;font-size:0.8rem;margin-bottom:10px;}
-
-/* LIVE MATCH FEED */
-.live-feed{margin-top:40px;background:#111;border-radius:16px;padding:20px;height:220px;overflow-y:scroll;}
-.live-feed .match{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #222;}
-.match-player{display:flex;align-items:center;gap:10px;}
-.match-player img{width:32px;height:32px;border-radius:50%;}
-.match-info{font-size:0.9rem;color:#aaa;}
-.match-info span{color:#00FF66;font-weight:600;}
-
-/* PAYMENT METHODS */
-.payments{display:flex;justify-content:center;gap:40px;margin-top:50px;}
-.payment-card{background:#111;padding:20px;border-radius:16px;display:flex;align-items:center;gap:12px;box-shadow:0 0 15px rgba(0,255,102,0.2);}
-
-/* CTA BANNER */
-.cta{background:linear-gradient(90deg,#00FF66,#00CC33);color:black;padding:60px;text-align:center;margin-top:80px;border-radius:18px;}
-.cta h2{font-size:2.8rem;font-weight:900;margin-bottom:12px;}
-.cta a{margin-top:20px;display:inline-block;padding:14px 30px;background:black;color:#00FF66;border-radius:999px;font-weight:800;text-decoration:none;}
-
-/* FOOTER */
-footer{background:#010101;padding:25px;text-align:center;color:#777;margin-top:60px;}
-
-/* MOBILE */
-@media(max-width:900px){.hero{flex-direction:column;text-align:center;}.hero-graphic{margin-top:30px;}}
-</style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="bg"></div>
 
-<header>
-  <div class="logo">Slither Arena</div>
-  <nav>
-    <a href="#">Lobby</a>
-    <a href="#">Leaderboard</a>
-    <a href="#">Login</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="hero-text">
-    <h1>Compete. <span>Win. Earn.</span></h1>
-    <p>Join the ultimate skill-based snake arena. Fast-paced matches, real money wins.</p>
-    <div class="hero-buttons">
-      <a href="#" class="btn-primary">Play Now</a>
-      <a href="#" class="btn-secondary">How It Works</a>
+  <header class="topbar">
+    <div class="welcome">
+      <span class="logo-bug" aria-hidden="true">🧡</span>
+      <span class="welcome-text">Welcome, <b>bruh!</b></span>
     </div>
-  </div>
-  <div class="hero-graphic">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Slither_Snake_icon.svg" alt="Snake Logo">
-  </div>
-</section>
 
-<section class="section">
-  <div class="section-title">Live Games</div>
-  <div class="games-grid" id="gamesGrid">
-    <!-- JS will populate live games -->
-  </div>
+    <button class="btn btn-pill btn-accent btn-login">Login</button>
+  </header>
 
-  <div class="live-feed" id="liveFeed">
-    <!-- JS will populate live match feed -->
-  </div>
+  <main class="wrap">
+    <!-- Brand -->
+    <section class="brand">
+      <div class="brand-mark">
+        <div class="brand-title">
+          <span class="brand-title-left">DAMN</span><span class="brand-title-right">BRUH</span>
+        </div>
+        <div class="brand-sub">SKILL-BASED BETTING</div>
+      </div>
+    </section>
 
-  <div class="payments">
-    <div class="payment-card"><img src="https://img.icons8.com/color/48/000000/stripe.png" width="32"/>Stripe</div>
-    <div class="payment-card"><img src="https://img.icons8.com/color/48/000000/bitcoin.png" width="32"/>Coinbase</div>
-  </div>
-</section>
+    <!-- Main grid -->
+    <section class="grid">
+      <!-- Left column -->
+      <div class="col">
+        <div class="card card-lg">
+          <div class="card-head">
+            <div class="card-title">
+              <span class="icon">🏆</span>
+              <span>Leaderboard</span>
+            </div>
+            <div class="pill pill-live">
+              <span class="dot"></span> Live
+            </div>
+          </div>
 
-<section class="cta">
-  <h2>Ready to Compete?</h2>
-  <p>Jump into the arena and challenge real opponents now!</p>
-  <a href="#">Create Free Account</a>
-</section>
+          <div class="leaderboard">
+            <div class="row">
+              <div class="name">1. terrorist</div>
+              <div class="amt">$16,434.61</div>
+            </div>
+            <div class="row">
+              <div class="name">2. glx_duolingo</div>
+              <div class="amt">$15,875.29</div>
+            </div>
+            <div class="row">
+              <div class="name">3. halfpriceofM3</div>
+              <div class="amt">$13,653.13</div>
+            </div>
+          </div>
 
-<footer>
-  © 2026 Slither Arena — Skill-Based Snake Matches Only
-</footer>
+          <button class="btn btn-outline full">View Full Leaderboard</button>
+        </div>
 
-<script>
-// Dummy live games
-const gamesGrid = document.getElementById('gamesGrid');
-const liveFeed = document.getElementById('liveFeed');
+        <div class="card card-xl">
+          <div class="card-head">
+            <div class="card-title">
+              <span class="icon">👥</span>
+              <span>Friends</span>
+            </div>
+            <div class="head-right">
+              <button class="chip">↻ Refresh</button>
+              <div class="pill pill-muted">0 playing</div>
+            </div>
+          </div>
 
-const liveGames = [
-  {title:'Snake Arena', badge:'Ranked', entry:'$1-$50'},
-  {title:'Snake Arena', badge:'Free', entry:'$1-$10'},
-  {title:'Snake Arena', badge:'Ranked', entry:'$5-$100'},
-];
+          <div class="friends-empty">
+            <div class="avatar-empty" aria-hidden="true"></div>
+            <div class="muted">No friends… add some!</div>
+          </div>
 
-liveGames.forEach(g=>{
-  const card = document.createElement('div');
-  card.className='game-card';
-  card.innerHTML=`<div class="game-title">${g.title}</div><div class="badge">${g.badge}</div><p>Entry: ${g.entry}</p>`;
-  gamesGrid.appendChild(card);
-});
+          <button class="btn btn-outline full">Add Friends</button>
+        </div>
 
-// Dummy live feed generator
-const players = ['SlitherKing','VenomSnake','GreenFang','QuickSnake','NeoSerpent'];
-function randomInt(min,max){return Math.floor(Math.random()*(max-min+1)+min);}
-function generateMatch(){
-  const match = document.createElement('div');
-  match.className='match';
-  const playerName = players[randomInt(0,players.length-1)];
-  const amount = '$'+randomInt(1,100);
-  match.innerHTML=`<div class="match-player"><img src="https://i.pravatar.cc/32?img=${randomInt(1,70)}"><span>${playerName}</span></div><div class="match-info">Snake <span>${amount}</span></div>`;
-  liveFeed.prepend(match);
-  if(liveFeed.childNodes.length>10){liveFeed.removeChild(liveFeed.lastChild);}
-}
-setInterval(generateMatch,2000); // every 2 seconds
-</script>
+        <button class="btn btn-discord">
+          <span class="discord-dot" aria-hidden="true"></span>
+          Join Discord!
+        </button>
+      </div>
 
+      <!-- Center column -->
+      <div class="col">
+        <div class="card card-join">
+          <div class="card-head center-head">
+            <div class="login-hint">
+              <span class="square icon-square">?</span>
+              <span class="muted">Login to set your name</span>
+            </div>
+            <button class="square icon-square" title="Edit" aria-label="Edit">✎</button>
+          </div>
+
+          <div class="bets">
+            <button class="btn btn-bet active" data-bet="1">$1</button>
+            <button class="btn btn-bet" data-bet="5">$5</button>
+            <button class="btn btn-bet" data-bet="20">$20</button>
+          </div>
+
+          <button class="btn btn-primary join">
+            <span class="play" aria-hidden="true">▶</span>
+            JOIN GAME
+          </button>
+
+          <div class="join-actions">
+            <button class="btn btn-outline small">
+              <span class="tiny">🌐</span> EU
+            </button>
+            <button class="btn btn-outline small">
+              <span class="tiny">≡</span> Browse Lobbies
+            </button>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-val">40</div>
+              <div class="stat-label">Players In Game</div>
+            </div>
+            <div class="stat">
+              <div class="stat-val">$1,300,784</div>
+              <div class="stat-label">Global Player Winnings</div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary subtle full">
+          <span class="tiny">👤</span>
+          Manage Affiliate
+        </button>
+      </div>
+
+      <!-- Right column -->
+      <div class="col">
+        <div class="card card-lg">
+          <div class="card-head">
+            <div class="card-title">
+              <span class="icon">💳</span>
+              <span>Wallet</span>
+            </div>
+            <div class="head-right">
+              <button class="chip">⧉ Copy Address</button>
+              <button class="chip">↻ Refresh Balance</button>
+            </div>
+          </div>
+
+          <div class="wallet">
+            <div class="wallet-amt">$0.00</div>
+            <div class="wallet-sub muted">0.0000 SOL</div>
+
+            <div class="wallet-actions">
+              <button class="btn btn-outline green">Add Funds</button>
+              <button class="btn btn-outline violet">Cash Out</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-xl">
+          <div class="card-head">
+            <div class="card-title">
+              <span class="icon">👕</span>
+              <span>Customize</span>
+            </div>
+          </div>
+
+          <div class="customize">
+            <!-- simple animated “worm” SVG placeholder -->
+            <div class="worm" aria-hidden="true">
+              <svg viewBox="0 0 420 180" width="100%" height="100%">
+                <defs>
+                  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="var(--acc2)"/>
+                    <stop offset="1" stop-color="var(--acc1)"/>
+                  </linearGradient>
+                  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="4" result="b"/>
+                    <feMerge>
+                      <feMergeNode in="b"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <path class="worm-path" d="M40,110 C80,40 160,40 200,95 C240,150 320,150 380,85"
+                      fill="none" stroke="url(#g)" stroke-width="34" stroke-linecap="round" filter="url(#soft)"/>
+                <circle cx="378" cy="85" r="18" fill="url(#g)" />
+                <circle cx="384" cy="81" r="5" fill="#0b0f14"/>
+                <circle cx="370" cy="81" r="5" fill="#0b0f14"/>
+              </svg>
+            </div>
+
+            <button class="btn btn-outline full">Change Appearance</button>
+          </div>
+        </div>
+
+        <div class="watermark muted">
+          Windows aktivieren<br/>
+          Wechseln Sie zu den Einstellungen, um Windows zu aktivieren.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>

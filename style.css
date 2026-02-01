@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  font-family: Inter, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(#0a0a0f, #050509);
+  color: white;
+}
+
+/* Top bar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  color: #8a5cff;
+}
+
+.login-btn {
+  background: #8a5cff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px;
+}
+
+/* Cards */
+.card {
+  background: #101018;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(138,92,255,0.15);
+}
+
+.main-card {
+  grid-column: span 1;
+  text-align: center;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  background: #1b1b26;
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: white;
+}
+
+.btn.green {
+  border-color: #33ffaa;
+}
+
+.btn.blue {
+  border-color: #33bbff;
+}
+
+.bet-row {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.bet {
+  flex: 1;
+  padding: 10px;
+  background: #1c1c2b;
+  border: 1px solid #8a5cff;
+  border-radius: 10px;
+  color: white;
+}
+
+.join-btn {
+  background: linear-gradient(135deg, #8a5cff, #33bbff);
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.stats span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Worm preview */
+.worm {
+  margin: 20px auto;
+  width: 140px;
+  height: 20px;
+  background: linear-gradient(to right, #8a5cff, #33bbff);
+  border-radius: 20px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+}
+
+.discord {
+  background: #5865f2;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  color: white;
+}

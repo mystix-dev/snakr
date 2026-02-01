@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DAMNBRUH — UI Clone</title>
+
+  <!-- Fonts (free) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <header class="topbar">
+    <div class="welcome">
+      <span class="logo-bug" aria-hidden="true">🧡</span>
+      <span class="welcome-text">Welcome, <b>bruh!</b></span>
+    </div>
+
+    <button class="btn btn-pill btn-accent btn-login">Login</button>
+  </header>
+
+  <main class="wrap">
+    <!-- Brand -->
+    <section class="brand">
+      <div class="brand-mark">
+        <div class="brand-title">
+          <span class="brand-title-left">DAMN</span><span class="brand-title-right">BRUH</span>
+        </div>
+        <div class="brand-sub">SKILL-BASED BETTING</div>
+      </div>
+    </section>
+
+    <!-- Main grid -->
+    <section class="grid">
+      <!-- Left column -->
+      <div class="col">
+        <div class="card card-lg">
+          <div class="card-head">
+            <div class="card-title">
+              <span class="icon">🏆</span>
+              <span>Leaderboard</span>
+            </div>
+            <div class="pill pill-live">
+              <span class="dot"></span> Live
+            </div>
+          </div>
+
+          <div class="leaderboard">
+            <div class="row">
+              <div class="name">1. terrorist</div>
+              <div class="amt">$16,434.61</div>
+            </div>
+            <div class="row">
+              <div class="name">2. glx_duolingo</div>
+              <div class="amt">$15,875.29</div>
+            </div>
+            <div class="row">
+              <div class="name">3. halfpriceofM3</div>
+              <div class="amt">$13,653.13</div>
+            </div>
+          </div>
+
+          <button class="btn btn-outline full">View Full Leaderboard</button>
+        </div>
+
+        <div class="card card-xl">
+          <div class="card-head">
+            <div class="card-title">
+              <span class="icon">👥</span>
+              <span>Friends</span>
+            </div>
+            <div class="head-right">
+              <button class="chip">↻ Refresh</button>
+              <div class="pill pill-muted">0 playing</div>
+            </div>
+          </div>
+
+          <div class="friends-empty">
+            <div class="avatar-empty" aria-hidden="true"></div>
+            <div class="muted">No friends… add some!</div>
+          </div>
+
+          <button class="btn btn-outline full">Add Friends</button>
+        </div>
+
+        <button class="btn btn-discord">
+          <span class="discord-dot" aria-hidden="true"></span>
+          Join Discord!
+        </button>
+      </div>
+
+      <!-- Center column -->
+      <div class="col">
+        <div class="card card-join">
+          <div class="card-head center-head">
+            <div class="login-hint">
+              <span class="square icon-square">?</span>
+              <span class="muted">Login to set your name</span>
+            </div>
+            <button class="square icon-square" title="Edit" aria-label="Edit">✎</button>
+          </div>
+
+          <div class="bets">
+            <button class="btn btn-bet active" data-bet="1">$1</button>
+            <button class="btn btn-bet" data-bet="5">$5</button>
+            <button class="btn btn-bet" data-bet="20">$20</button>
+          </div>
+
+          <button class="btn btn-primary join">
+            <span class="play" aria-hidden="true">▶</span>
+            JOIN GAME
+          </button>
+
+          <div class="join-actions">
+            <button class="btn btn-outline small">
+              <span class="tiny">🌐</span> EU
+            </button>
+            <button class="btn btn-outline small">
+              <span class="tiny">≡</span> Browse Lobbies
+            </button>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-val">40</div>
+              <div class="stat-label">Players In Game</div>
+            </div>
+            <div class="stat">
+              <div class="stat-val">$1,300,784</div>
+              <div class="stat-label">Global Player Winnings</div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary subtle full">
+          <span class="tiny">👤</span>
+          Manage Affiliate
+        </button>
+      </div>
+
+      <!-- Right column -->
+      <div class="col">
+        <div class="card card-lg">
+          <div class="card-head">
+            <div class="card-title">
+              <span class="icon">💳</span>
+              <span>Wallet</span>
+            </div>
+            <div class="head-right">
+              <button class="chip">⧉ Copy Address</button>
+              <button class="chip">↻ Refresh Balance</button>
+            </div>
+          </div>
+
+          <div class="wallet">
+            <div class="wallet-amt">$0.00</div>
+            <div class="wallet-sub muted">0.0000 SOL</div>
+
+            <div class="wallet-actions">
+              <button class="btn btn-outline green">Add Funds</button>
+              <button class="btn btn-outline violet">Cash Out</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-xl">
+          <div class="card-head">
+            <div class="card-title">
+              <span class="icon">👕</span>
+              <span>Customize</span>
+            </div>
+          </div>
+
+          <div class="customize">
+            <!-- simple animated “worm” SVG placeholder -->
+            <div class="worm" aria-hidden="true">
+              <svg viewBox="0 0 420 180" width="100%" height="100%">
+                <defs>
+                  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="var(--acc2)"/>
+                    <stop offset="1" stop-color="var(--acc1)"/>
+                  </linearGradient>
+                  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="4" result="b"/>
+                    <feMerge>
+                      <feMergeNode in="b"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <path class="worm-path" d="M40,110 C80,40 160,40 200,95 C240,150 320,150 380,85"
+                      fill="none" stroke="url(#g)" stroke-width="34" stroke-linecap="round" filter="url(#soft)"/>
+                <circle cx="378" cy="85" r="18" fill="url(#g)" />
+                <circle cx="384" cy="81" r="5" fill="#0b0f14"/>
+                <circle cx="370" cy="81" r="5" fill="#0b0f14"/>
+              </svg>
+            </div>
+
+            <button class="btn btn-outline full">Change Appearance</button>
+          </div>
+        </div>
+
+        <div class="watermark muted">
+          Windows aktivieren<br/>
+          Wechseln Sie zu den Einstellungen, um Windows zu aktivieren.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
